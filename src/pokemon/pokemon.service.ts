@@ -31,6 +31,7 @@ export class PokemonService {
       const pokemon = await this.pokemonModel.create(createPokemonDto);
       return pokemon;
     } catch (error) {
+      console.log(error)
       this.handleExceptions(error);
     }
   }
