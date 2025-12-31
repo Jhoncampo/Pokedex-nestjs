@@ -17,14 +17,9 @@ export class RegisterService {
   ) {}
   async create(createRegisterDto: CreateRegisterDto) {
     try {
-      console.log('createRegisterDto: ', createRegisterDto);
-
       const register = await this.registerModel.create(createRegisterDto);
-      console.log('hola: ', register);
       return register;
     } catch (error) {
-      console.log(error)
-
       this.handleExceptions(error);
     }
   }
