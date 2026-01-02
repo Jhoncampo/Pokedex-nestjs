@@ -28,7 +28,7 @@ docker-compose up -d
 npm run start:dev
 ```
 
-6. Reconstruir la base de datos con la semana
+8. Reconstruir la base de datos con la semana
 ```
 http://localhost:3000/api/v2/seed
 ```
@@ -39,4 +39,8 @@ http://localhost:3000/api/v2/seed
 
 ## Libraries
 * Joi: Validación de variables de entorno
+
+## Recursos
+Recursos para el docker
+* https://gist.github.com/Klerith/e7861738c93712840ab3a38674843490
 
