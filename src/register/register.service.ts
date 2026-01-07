@@ -17,9 +17,13 @@ export class RegisterService {
   ) {}
   async create(createRegisterDto: CreateRegisterDto) {
     try {
+      console.log("Insertar Dto: ",createRegisterDto)
+
       const register = await this.registerModel.create(createRegisterDto);
+      console.log("Insertado: ",register)
       return register;
     } catch (error) {
+      console.log("This a error: ",error)
       this.handleExceptions(error);
     }
   }
@@ -28,8 +32,15 @@ export class RegisterService {
     return `This action returns all register`;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} register`;
+  findOne(email: string) {
+    console.log("This an email: ", email)
+    try {
+      const res = this.registerModel.findOne({email: email})
+      return res
+    } catch (error) {
+      
+    }
+    return `This action returns a #${email} register`;
   }
 
   update(id: number, updateRegisterDto: UpdateRegisterDto) {

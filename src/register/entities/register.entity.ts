@@ -5,8 +5,9 @@ import { Document } from 'mongoose';
 export class Register extends Document {
   @Prop({
     min: 2,
+    index: true,
   })
-  fulName: string;
+  fullName: string;
   @Prop({
     unique: true,
     index: true,
