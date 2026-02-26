@@ -37,6 +37,18 @@ http://localhost:3000/api/v2/seed
 * MongoDb
 * Nest
 
+## Production build
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno de prod
+3. Crear la imagen
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+4. Volver a correr la imagen
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
+
 ## Libraries
 * Joi: Validación de variables de entorno
 
